@@ -17,4 +17,8 @@ export class LeadService {
     await _lead.updateOne(lead)
     return 'Update Success'
   }
+  async removeLead(id: any): Promise<String>{
+    await this._leadModel.findByIdAndRemove({ _id: id  })
+    return 'Update Success'
+  }
 }
